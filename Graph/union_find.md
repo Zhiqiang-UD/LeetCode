@@ -58,3 +58,6 @@ def union(x, y):
 3. [947. Most Stones Removed with Same Row or Column](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
    1. Union row and col index for each point
    2. Convert colIdx to colIdx + 10001, so its unique.
+4. [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+   1. Sort edges first and union from smaller to bigger so that once start and end are connected, the edge is minimum
+   2. Start and end are connected when they have same root.
