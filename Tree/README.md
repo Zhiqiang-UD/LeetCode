@@ -69,8 +69,43 @@ Breath-First-Search using a queue is trivial. We mainly focus on Depth-First-Sea
 The order of left and right can be swapped, by convention left is visited first. The order is determined by when **root** is visited. 
 
 ```python
+"""
+Traversal using recursion is trivial. The following is iterative code.
+"""
 def preOrder(root):
-  
+   if not root:
+      return
+   st = [root]
+   while st:
+      node = st.pop()
+      #process root
+      if not node:
+         continue
+      print(node.val)
+      # add right, left child to stack
+      st.append(node.right)
+      st.append(node.left)
+
+def inOrder(root):
+   if not root:
+      return
+   st = []
+   while root or st:
+      # store all left child
+      while root:
+         st.append(root)
+         root = root.left
+
+      # top of stack is the left most, pop to avoid double-processing
+      node = st.pop()
+      print(node.val)
+      #node has no left, so we go right
+      root = node.right
+
+def postOrder(root):
+   if not root:
+      return
+   
 ```
 
 ### Binary Search Tree (BST)
