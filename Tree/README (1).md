@@ -130,10 +130,4 @@ The feature of BST can allow us to reduce searching space while searching for a 
 * [285. Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/)
   * Get rid of left or right based on the comparison of root.val vs. p.val
   * The successor will always be the last one that is bigger than p
-* [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
-  * Solve using recursion
-  * Two helper function: predecessor (go left and all the way right) and successor (go right and then left down)
-  * Keep going left or right until find node to be deleted
-  * Update its value to its predecessor or successor. The go to predecessor or successor to delete that duplicate node. 
-  * Time is O(height) since we always go down. The last call to delete duplicate node is a leaf.
 
